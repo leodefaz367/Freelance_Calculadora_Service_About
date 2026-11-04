@@ -1,0 +1,398 @@
+/* Variables CSS */
+:root {
+    --colorUno: #ffffff;
+    --colorDos: #ffffff;
+    --colorTres: #DDEBCF;
+    --colorCuatro: #f4f7f0;
+    --colorCinco: #DEC9AC;
+    --colorTexto: #333333;
+    --colorAccent: #6B8A5A;
+    --fuentePrincipal: "Roboto", sans-serif;
+    --fuenteSecundaria: "Lato", sans-serif;
+}
+
+/* General styles for the document HTML */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: var(--colorUno);
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorTexto);
+    background-color: var(--colorUno);
+    margin: 0;
+}
+
+/* Styles for containers */
+.container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* General styles for images */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Styles for Section Navbar */
+.navbar__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: var(--colorUno);
+    border-bottom: 2px solid #e2e8f0;
+}
+
+@media (width >= 768px) {
+    .navbar__container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (width >= 768px) {
+    .navbar__brand {
+        margin-bottom: 0;
+    }
+}
+
+.navbar__img-logo {
+    height: 150px;   
+    width: auto;    
+    object-fit: contain;
+}
+
+.navbar__titles {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__logo {
+    font-size: 1.8rem;
+    color: var(--colorTexto);
+    cursor: pointer;
+    margin: 0;
+    font-weight: 700;
+}
+
+.navbar__logo--primary {
+    color: var(--colorTexto);
+    font-weight: 300;
+}
+
+.navbar__subtitle {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+}
+
+ul li a {
+    color: var(--colorTexto);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+ul li a.btn-login {
+    background-color: #E3EDC5;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.8rem;
+    color: var(--colorTexto);
+    transition: background-color 0.3s ease;
+}
+
+ul li a.btn-login:hover {
+    background-color: var(--colorAccent);
+    color: white;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: var(--colorAccent);
+}
+
+/* Styles for Section Main */
+main {
+    background-color: var(--colorUno);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.hero__text {
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.2rem;
+    color: #555;
+    padding: 0 1rem;
+}
+
+.hero__text h2 {
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+.hero__img {
+    max-width: 1000px;
+    width: 100%;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+}
+
+.hero__services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    background-color: var(--colorCuatro);
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: var(--colorTexto);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.bx {
+    font-size: 2.5rem;
+    color: var(--colorAccent);
+}
+
+.service p {
+    margin: 0;
+}
+
+ .sobre-nosotros{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: auto;
+        text-align: left;
+        border-top: 10px solid var(--colorSeis);
+    }
+
+    .about{
+        flex: 1;
+    }
+
+    .about__title{
+        font-family: var(--fuentePrincipal);
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--colorTexto);
+        margin: auto;
+    }
+
+    .about__texto{
+        font-family: var(--fuenteSecundaria);
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666;
+        margin: auto;
+    }
+
+    .about__imagen{
+        width: 300px;
+        flex-shrink: 0;
+    }
+
+    .about__imagen img{
+        width: 100%;
+        height: auto;
+    }
+
+    @media (max-width:767px){
+        .sobre-nosotros{
+            flex-direction: column;
+            gap: 25px;
+        }
+        .about__imagen{
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+    /* ===================================
+    Sección: Cómo usar la calculadora
+    =================================== */
+    .steps {
+        padding: 3rem 0;
+    }
+
+    .steps__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        color: var(--colorTexto);
+    }
+
+    .steps__grid {
+        display: grid;
+        grid-template-columns: 1fr; /* 1 columna en teléfonos pequeños */
+        gap: 1.5rem;
+    }
+
+    /* De tablet en adelante (>= 600px / 768px): Se muestran de 2 en 2 (Grid 2x2) */
+    @media (min-width: 600px) {
+        .steps__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 2rem;
+        }
+    }
+
+    .step__card {
+        background-color: #F4F1E8; /* Tono beige pastel de la imagen */
+        padding: 1.5rem 2rem;
+        border-radius: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .step__header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .step__icon {
+        font-size: 0.9rem;
+        color: #777777;
+    }
+
+    .step__num {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--colorTexto);
+    }
+
+    .step__text {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #444444;
+        line-height: 1.4;
+    }
+
+    /*Sección: Calculadora*/
+    .calculator {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .calculator__title {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 800;
+        letter-spacing: 1px;
+        margin-bottom: 2.5rem;
+        text-transform: uppercase;
+    }
+
+    .calculator__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    @media (min-width: 600px) {
+        .calculator__grid {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 2rem;
+            row-gap: 1.2rem;
+        }
+    }
+
+    .form__group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .form__label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #555555;
+    }
+
+    .form__input {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        background-color: #F8FCEB;
+        border: 1px solid #E2EFC8;
+        border-radius: 0.7rem;
+        font-size: 0.95rem;
+        color: var(--colorTexto);
+        outline: none;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form__input::placeholder {
+        color: #C2D1B2;
+    }
+
+    .form__input:focus {
+        border-color: var(--colorAccent);
+        box-shadow: 0 0 0 2px rgba(107, 138, 90, 0.2);
+    }
+
+    .calculator__actions {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+
+    .btn-calculate {
+        background-color: #DEC9AC;
+        color: #2D251E;
+        border: none;
+        padding: 0.9rem 3.5rem;
+        font-size: 1.05rem;
+        font-weight: 700;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+    }
+
+    .btn-calculate:hover {
+        background-color: #cfb492;
+    }
+
+    .btn-calculate:active {
+        transform: scale(0.98);
+    }
